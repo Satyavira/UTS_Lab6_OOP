@@ -18,10 +18,10 @@ Anagram adalah kata atau frasa yang terbentuk dari penyusunan ulang huruf huruf 
 <br>Output : Boolean
 
 **Output:**
-![output1.png](output1.png)
+![output1.png](src/output1.png)
 **<br><br>Soal 3: <br><br>**
 Ada sebuah kelas Employee yang memodelkan karyawan dengan ID, firstName, lastName, dan salary seperti yang ditunjukkan pada class diagram berikut. Method raiseSalary(percent) berfungsi untuk menaikkan gaji dengan persentase tertentu. Tuliskanlah kodingan program untuk class Employee tersebut.  
-![Employee.png](Employee.png)
+![Employee.png](src/Employee.png)
 Berikut kodingan Main program untuk ujicoba class Account
 `````
 public class TestMain {    public static void
@@ -54,12 +54,12 @@ name is: Xavier Valave annual salary is: 11988
 Employee[id=8,name=Xavier Valave,salary=1098]  
 `````
 **Output:**
-![output2.png](output2.png)
+![output2.png](src/output2.png)
 **<br><br>Soal 4: <br><br>**
 Buatlah Sebuah Program Menggunakan Overloading Dan Constructor Untuk Menghitung Rumus Complex(Semakin kompleks, semakin baik) dari Mata Pelajaran Fisika atau Matematika, setiap orang boleh memilih secara bebas rumus apa yang ingin dioperasikan dalam program.
 
 **Output:**
 <br><br>Output 1:
-![output3.png](output3.png)
+![output3.png](src/output3.png)
 <br><br>Output 2:
-![output4.png](output4.png)
+![output4.png](src/output4.png)

@@ -1,4 +1,4 @@
-package UTS.soal2;
+package soal2;
 
 import java.util.HashMap;
 import java.util.Scanner;

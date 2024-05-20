@@ -1,4 +1,4 @@
-package UTS.soal1;
+package soal1;
 
 import java.util.HashMap;
 

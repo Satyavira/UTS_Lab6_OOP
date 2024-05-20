@@ -1,4 +1,4 @@
-package UTS.soal3;
+package soal3;
 
 public class Employee {
     private int id;

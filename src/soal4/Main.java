@@ -1,4 +1,4 @@
-package UTS.soal4;
+package soal4;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package UTS.soal1;
+package soal1;
 
 public class Male extends Human { // Class Male merupakan subclass dari class Human
     // Constructor adalah metode khusus yang disebut ketika sebuah objek baru dibuat.

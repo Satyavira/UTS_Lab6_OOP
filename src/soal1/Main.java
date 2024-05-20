@@ -1,36 +1,80 @@
-package UTS.soal1;
+package soal1;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) { // Fungsi main adalah fungsi utama yang dieksekusi ketika program dijalankan.
-
-        // Membuat objek Human bernama Sanda
-        Human Sanda = new Human("Sanda", "Black", 155.0, 60.0, 20, "Male", "Black", true);
-        Sanda.sayHello(); // Memanggil method sayHello() untuk menampilkan nama Sanda.
-        Sanda.countCalories(1234); // Memanggil method countCalories() untuk menghitung kalori dengan input total kalori 1234.
-        Sanda.countCalories(new String[]{"Chicken breast"}, new int[]{1}); // Memanggil method countCalories() untuk menghitung kalori dengan input 1 dada ayam.
-        Sanda.breakUp(); // Memanggil method breakUp() untuk mengubah status hubungan Sanda menjadi single (lajang).
-        Sanda.getTogether(); // Memanggil method getTogether() untuk mengubah status hubungan Sanda menjadi tidak single (berpasangan).
-        Sanda.isIdealWeight(); // Memanggil method isIdealWeight() untuk mengecek apakah berat badan Sanda ideal.
-        System.out.println(); // Mencetak baris kosong untuk memberi jarak.
-
-        // Membuat objek Male bernama Banda
-        Male Banda = new Male("Banda", "Yellow", 155.0, 60.0, 20, "Black", false);
-        Banda.sayHello(); // Memanggil method sayHello() untuk menampilkan nama Banda.
-        Banda.countCalories(1473.75); // Memanggil method countCalories() untuk menghitung kalori dengan input total kalori 1473.75.
-        Banda.countCalories(new String[]{}, new int[]{}); // Memanggil method countCalories() untuk menghitung kalori dengan input 10 dada ayam.
-        Banda.breakUp(); // Memanggil method breakUp() untuk mengubah status hubungan Banda menjadi single (lajang).
-        Banda.getTogether(); // Memanggil method getTogether() untuk mengubah status hubungan Banda menjadi tidak single (berpasangan).
-        Banda.isIdealWeight(); // Memanggil method isIdealWeight() untuk mengecek apakah berat badan Banda ideal.
-        System.out.println(); // Mencetak baris kosong untuk memberi jarak.
-
-        // Membuat objek Female bernama Handa
-        Female Handa = new Female("Handa", "White", 155.0, 60.0, 20, "Black", true);
-        Handa.sayHello(); // Memanggil method sayHello() untuk menampilkan nama Handa.
-        Handa.countCalories(1500); // Memanggil method countCalories() untuk menghitung kalori dengan input total kalori 1500.
-        Handa.countCalories(new String[]{"Chicken breast"}, new int[]{1}); // Memanggil method countCalories() untuk menghitung kalori dengan input 1 dada ayam.
-        Handa.breakUp(); // Memanggil method breakUp() untuk mengubah status hubungan Handa menjadi single (lajang).
-        Handa.getTogether(); // Memanggil method getTogether() untuk mengubah status hubungan Handa menjadi tidak single (berpasangan).
-        Handa.isIdealWeight(); // Memanggil method isIdealWeight() untuk mengecek apakah berat badan Handa ideal.
-        System.out.println(); // Mencetak baris kosong untuk memberi jarak.
+        Scanner in = new Scanner(System.in);
+        System.out.print("Berapa objek Human/Male/Female yang ingin dibuat: ");
+        int banyakObjek = in.nextInt();
+        in.nextLine();
+        Human[] humans = new Human[banyakObjek];
+        for (int i = 0; i < banyakObjek; i++) {
+            String name;
+            String skinColor;
+            double height;
+            double weight;
+            int age;
+            String hairColor;
+            String gender;
+            boolean isSingle;
+            System.out.print("What's your name: ");
+            name = in.nextLine();
+            System.out.print("What's your skin color: ");
+            skinColor = in.next();
+            System.out.print("What's your height: ");
+            height = in.nextDouble();
+            System.out.print("What's your weight: ");
+            weight = in.nextDouble();
+            System.out.print("What's your age: ");
+            age = in.nextInt();
+            System.out.print("What's your hair color: ");
+            hairColor = in.next();
+            System.out.print("What's your gender(Human/Male/Female): ");
+            gender = in.next();
+            while(true) {
+                if (gender.equals("Human") || gender.equals("Male") || gender.equals("Female")) {
+                    break;
+                } else {
+                    System.out.print("What's your gender(Human/Male/Female): ");
+                    gender = in.next();
+                }
+            }
+            System.out.print("What's your relationship status(true/false): ");
+            isSingle = in.nextBoolean();
+            in.nextLine();
+            if (gender.equals("Human")) {
+                // Membuat objek Human
+                humans[i] = new Human(name, skinColor, height, weight, age, gender, hairColor, isSingle);
+                humans[i].sayHello(); // Memanggil method sayHello() untuk menampilkan nama humans[i].
+                humans[i].countCalories(1234); // Memanggil method countCalories() untuk menghitung kalori dengan input total kalori 1234.
+                humans[i].countCalories(new String[]{"Chicken breast"}, new int[]{1}); // Memanggil method countCalories() untuk menghitung kalori dengan input 1 dada ayam.
+                humans[i].breakUp(); // Memanggil method breakUp() untuk mengubah status hubungan humans[i] menjadi single (lajang).
+                humans[i].getTogether(); // Memanggil method getTogether() untuk mengubah status hubungan humans[i] menjadi tidak single (berpasangan).
+                humans[i].isIdealWeight(); // Memanggil method isIdealWeight() untuk mengecek apakah berat badan humans[i] ideal.
+                System.out.println(); // Mencetak baris kosong untuk memberi jarak.
+                continue;
+            } if (gender.equals("Male")) {
+            // Membuat objek Male bernama humans[i]
+            humans[i] = new Male(name, skinColor, height, weight, age, hairColor, isSingle);
+            humans[i].sayHello(); // Memanggil method sayHello() untuk menampilkan nama humans[i].
+            humans[i].countCalories(1473.75); // Memanggil method countCalories() untuk menghitung kalori dengan input total kalori 1473.75.
+            humans[i].countCalories(new String[]{}, new int[]{}); // Memanggil method countCalories() untuk menghitung kalori dengan input 10 dada ayam.
+            humans[i].breakUp(); // Memanggil method breakUp() untuk mengubah status hubungan humans[i] menjadi single (lajang).
+            humans[i].getTogether(); // Memanggil method getTogether() untuk mengubah status hubungan humans[i] menjadi tidak single (berpasangan).
+            humans[i].isIdealWeight(); // Memanggil method isIdealWeight() untuk mengecek apakah berat badan humans[i] ideal.
+            System.out.println(); // Mencetak baris kosong untuk memberi jarak.
+                continue;
+            }
+            // Membuat objek Female
+            humans[i] = new Female(name, skinColor, height, weight, age, hairColor, isSingle);
+            humans[i].sayHello(); // Memanggil method sayHello() untuk menampilkan nama humans[i].
+            humans[i].countCalories(1500); // Memanggil method countCalories() untuk menghitung kalori dengan input total kalori 1500.
+            humans[i].countCalories(new String[]{"Chicken breast"}, new int[]{1}); // Memanggil method countCalories() untuk menghitung kalori dengan input 1 dada ayam.
+            humans[i].breakUp(); // Memanggil method breakUp() untuk mengubah status hubungan humans[i] menjadi single (lajang).
+            humans[i].getTogether(); // Memanggil method getTogether() untuk mengubah status hubungan humans[i] menjadi tidak single (berpasangan).
+            humans[i].isIdealWeight(); // Memanggil method isIdealWeight() untuk mengecek apakah berat badan humans[i] ideal.
+            System.out.println(); // Mencetak baris kosong untuk memberi jarak.
+        }
     }
 }
